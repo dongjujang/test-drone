@@ -1,0 +1,4 @@
+notify:
+	email:
+		recipients:
+			- dongju@cosmos.io
