@@ -2,5 +2,6 @@ image: go1.2
 services:
 	- mysql
 script:
+	- echo hello world
 	- mysql -u root -e 'create database test;'
 	- mysql -u root -D test < schema.sql
