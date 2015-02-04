@@ -1,3 +1,8 @@
-image: dockerfile/nginx
+image: mischief/docker-golang
+env:
+  - GOPATH=/var/cache/drone
 script:
- - echo hello worldaaaaaaaaa
+  - go build
+  - go test -v
+services:
+  - mysql
