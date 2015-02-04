@@ -3,6 +3,8 @@ env:
   - GOPATH=/var/cache/drone
 script:
   - go build
-  - go test -v
 services:
   - mysql
+script:
+  - mysql -u root -e 'create database test;'
+  - mysql -u root -D test < schema.sql
